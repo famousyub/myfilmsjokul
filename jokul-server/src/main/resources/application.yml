@@ -1,0 +1,36 @@
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+    hibernate:
+
+      ddl-auto: update
+  properties:
+
+    show-sql: true
+  #spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5InnoDBDialect
+  #spring.jpa.hibernate.ddl-auto = update
+  jackson:
+    default-property-inclusion: non_null
+  datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/moviedb?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
+      username: root
+      password:
+  servlet:
+      multipart:
+        max-file-size: 2048MB
+        max-request-size: 2048MB
+        enabled: true
+server:
+  port: 8090
+  servlet:
+    context-path: /jokul
+
+storage:
+  location: upload-dir
+  source: C:\Users/g702306/Desktop/mylarav/jokul-master/jokul-server/%s.mp4
+
+
